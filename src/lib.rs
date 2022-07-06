@@ -56,14 +56,14 @@ macro_rules! try_fold {
         }
 
         fn next(&mut self) -> Option<Self::Item> {
-            self.try_fold(None, |_, next| crate::Break(Some(next))).0
+            self.try_fold(None, |_, next| $crate::Break(Some(next))).0
         }
 
         fn fold<B, F>(mut self, init: B, mut f: F) -> B
         where
             F: FnMut(B, Self::Item) -> B,
         {
-            self.try_fold(init, |acc, next| crate::Continue(f(acc, next))).0
+            self.try_fold(init, |acc, next| $crate::Continue(f(acc, next))).0
         }
     }
 }
