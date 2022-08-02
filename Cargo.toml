@@ -1,6 +1,6 @@
 [package]
 name = "try_fold_impl"
-version = "0.1.2"
+version = "0.2.0"
 edition = "2021"
 description = "Simple macro for deriving Iterator::next and ::fold from a ::try_fold implementation"
 license = "MIT"
