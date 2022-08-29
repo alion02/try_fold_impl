@@ -2,7 +2,8 @@
 
 use std::ops::{ControlFlow, FromResidual, Try};
 
-struct Break<T>(pub T);
+#[doc(hidden)]
+pub struct Break<T>(pub T);
 
 impl<T> FromResidual<T> for Break<T> {
     fn from_residual(residual: T) -> Self {
@@ -23,7 +24,8 @@ impl<T> Try for Break<T> {
     }
 }
 
-struct Continue<T>(pub T);
+#[doc(hidden)]
+pub struct Continue<T>(pub T);
 
 impl<T> FromResidual<T> for Continue<T> {
     fn from_residual(residual: T) -> Self {
