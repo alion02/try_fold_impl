@@ -4,5 +4,6 @@ version = "0.2.1"
 edition = "2021"
 description = "Simple macro for deriving Iterator::next and ::fold from a ::try_fold implementation"
 license = "MIT"
+repository = "https://github.com/alion02/try_fold_impl"
 
 [dependencies]
